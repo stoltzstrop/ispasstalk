@@ -49,7 +49,7 @@
             \end{itemize}
     \item Craft or translate the algorithm of interest 
     \item Determine what memory to use running the resulting kernel 
-    \item Creating an OpenCL kernel from your algorithm 
+    \item Create an OpenCL kernel from your algorithm 
 \end{itemize}
 %\begin{block}{}
 %\includegraphics[width=\textwidth]{../images/zoo.pdf}
@@ -85,12 +85,14 @@
 \frametitle{Initialising Data in Scala}
 \begin{itemize}
     \item Create arrays of data to pass into Lift algorithms in Scala 
+        \vspace{-.5cm}
 \begin{block}{}
     \begin{center}
          \includegraphics[width=.85\textwidth]{../images/scalaArrays.png}
     \end{center}
 \end{block}
-    \item Our examples are all in unit tests, which include comparison data to compare against - often from the same algorithm in Scala 
+    \item Our examples are all in unit tests, which include data to compare against - often from the same algorithm in Scala 
+        \vspace{-.5cm}
     \begin{block}{}
         \begin{center}
             \includegraphics[width=.85\textwidth]{../images/unitTestData.png}
@@ -101,11 +103,13 @@
 
 \begin{frame}
 \frametitle{Developing an Algorithm}
-The goal is not for Lift to be programmed in directly. However, functionality for new types of algorithms must be added in and tested. In doing so, there are a few things to keep in mind: 
+The goal is not for Lift to be programmed in directly.\\
+\vspace{.1cm}
+However, functionality for new types of algorithms must be added in and tested. In doing so, there are a few things to keep in mind: 
 \begin{itemize}
-    \item Lift allows multiple inputs, but there is only one entry point to the main algorithm
+    \item Lift allows multiple inputs, but there is only one data entry point to the main algorithm (can contain tuples)
     \item The algorithm itself must eventually map values back to global memory
-    \item The result will be returned in a single array (however, this array can contain tuples)
+    \item The result will be returned in a single array (however, this array can also contain tuples)
 \end{itemize}
 \end{frame}
 
@@ -125,9 +129,10 @@ The goal is not for Lift to be programmed in directly. However, functionality fo
         \begin{itemize}
             \item MapGlb - use global memory
             \item MapWrg - use workgroup memory
-            \item MapGlb - use local memory
+            \item MapLcl - use local memory
         \end{itemize}
-    \item Can parallelise up to 3 dimensions in OpenCL  
+    \item Can parallelise up to 3 dimensions in OpenCL 
+        \vspace{-.5cm}
     \begin{block}{}
         \begin{center}
             \includegraphics[width=.85\textwidth]{../images/mapMapMap.png}
@@ -192,7 +197,10 @@ The goal is not for Lift to be programmed in directly. However, functionality fo
 \frametitle{Matrix-Matrix Multiplication Overview}
 \vspace{.2cm}
 \begin{itemize}
-    \item Hi 
+    \item Widely used algorithm in mathematics, physics, engineering, etc
+    \item Range of possible optimisations can be used, the performance of which varies across architectures
+    \item Lift makes it easy to test these optimisations out without having to rewrite the original code 
+
 \end{itemize}
 \vspace{-1.2cm}
 %\begin{block}{}
@@ -203,36 +211,19 @@ The goal is not for Lift to be programmed in directly. However, functionality fo
 \begin{frame}{Matrix-Matrix Multiplication Example Code}
         \begin{block}{}
         \begin{center}
-            \includegraphics[width=.5\textwidth]{../images/simpleCompile.png}
+            \includegraphics[width=\textwidth]{../images/matrixMatrix.png}
         \end{center}
         \end{block}
-
-%        \begin{center}
-%            \begin{columns}
-%    \begin{column}{.3\textwidth}
-%        \begin{block}{}
-%            %\hspace{-.03cm}
-%            \includegraphics[width=3.8cm, height=2.5cm]{../images/soundwaves.png}
-%        \end{block}
-%        \end{column}
-%        \begin{column}{.3\textwidth}
-%            \LARGE\begin{equation*}\frac{\partial^2 \Psi}{\partial t^2} = c^2\nabla^2 \Psi\end{equation*}
-%           % \begin{block}{}
-%           %     % Your text here
-%           % \end{block}
-%        \end{column}
-%    \begin{column}{.3\textwidth}
-%        {
-%            \setbeamercolor{block body}{bg=white}
-%        \begin{block}{}
-%            %\hspace{-.03cm}
-%            \includegraphics[width=.95\textwidth]{../images/stencil.pdf}
-%        \end{block}
-%    }
-%        \end{column}
-%    \end{columns}
-%\end{center}
 \end{frame}
+
+\begin{frame}{Matrix-Matrix Multiplication Using Rewrites}
+        \begin{block}{}
+        \begin{center}
+            \includegraphics[width=\textwidth]{../images/matrixRewrites.pdf}
+        \end{center}
+        \end{block}
+\end{frame}
+
 
 \section{Detailed Example: Convolutional Neural Network }
 
@@ -240,7 +231,7 @@ The goal is not for Lift to be programmed in directly. However, functionality fo
 \frametitle{Convolutional Neural Network Overview}
 \vspace{.2cm}
 \begin{itemize}
-    \item Hi
+    \item 
 \end{itemize}
 \vspace{-1.2cm}
 %\begin{block}{}
@@ -273,7 +264,8 @@ The goal is not for Lift to be programmed in directly. However, functionality fo
 \frametitle{Acoustics Simulation Overview}
 \vspace{.2cm}
 \begin{itemize}
-    \item Hi
+    \item Partial Differential Equations can be discritised into stencils to model physical simulations like 3D wave models 
+    \item A simple acoustics simulation shows how this can be done in Lift 
 \end{itemize}
 \vspace{-1.2cm}
 %\begin{block}{}
@@ -284,7 +276,7 @@ The goal is not for Lift to be programmed in directly. However, functionality fo
 \begin{frame}{Acoustics Simulation Example Code}
         \begin{block}{}
         \begin{center}
-            \includegraphics[width=.5\textwidth]{../images/simpleCompile.png}
+            \includegraphics[width=\textwidth]{../images/acousticLambda.png}
         \end{center}
         \end{block}
 \end{frame}

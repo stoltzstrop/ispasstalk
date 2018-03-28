@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2017.3.27)  28 MAR 2018 14:27
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2017.3.27)  28 MAR 2018 16:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1572,32 +1572,40 @@ File: ../images/execute.png Graphic file (type QTm)
 ] [11
 
 ]
-File: ../images/simpleCompile.png Graphic file (type QTm)
+File: ../images/matrixMatrix.png Graphic file (type QTm)
 
-<use  "../images/simpleCompile.png" > [12
+<use  "../images/matrixMatrix.png" > [12
 
-] [13
+]
+File: ../images/matrixRewrites.pdf Graphic file (type QTm)
+
+<use  "../images/matrixRewrites.pdf" >
+Overfull \vbox (0.12569pt too high) detected at line 225
+ []
+
+[13
 
 ] [14
 
+] [15
+
 ]
 File: ../images/simpleCompile.png Graphic file (type QTm)
-
-<use  "../images/simpleCompile.png" > [15
-
-] [16
+ <use  "../images/simpleCompile.png" > [16
 
 ] [17
 
-]
-File: ../images/simpleCompile.png Graphic file (type QTm)
+] [18
 
-<use  "../images/simpleCompile.png" > [18
+]
+File: ../images/acousticLambda.png Graphic file (type QTm)
+
+<use  "../images/acousticLambda.png" > [19
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\translate ' on input line 293.
+(hyperref)                removing `\translate ' on input line 285.
 
 \tf@nav=\write6
 \openout6 = `ApplicationsTutorial.nav'.
@@ -1608,20 +1616,20 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 \tf@snm=\write8
 \openout8 = `ApplicationsTutorial.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 296.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 296.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 288.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 288.
 (./ApplicationsTutorial.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 296.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 296.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 296.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 288.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 288.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 288.
  ) 
 Here is how much of TeX's memory you used:
- 44885 strings out of 495658
- 1009828 string characters out of 6187904
+ 44893 strings out of 495658
+ 1009978 string characters out of 6187904
  1159354 words of memory out of 5000000
- 47347 multiletter control sequences out of 15000+600000
+ 47352 multiletter control sequences out of 15000+600000
  6756 words of font info for 45 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  71i,13n,88p,10420b,694s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on ApplicationsTutorial.pdf (18 pages).
+Output written on ApplicationsTutorial.pdf (19 pages).
